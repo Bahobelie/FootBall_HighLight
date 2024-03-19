@@ -38,6 +38,9 @@ const Sidebar = () => {
             const relatedMatches = matches.filter(m => m.competition.name === match.competition.name);
             setSelectedMatches([...selectedMatches, ...relatedMatches]);
         }
+       window.scrollTo({top: 0, behavior: 'smooth'})
+
+
     };
 
 
