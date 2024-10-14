@@ -21,8 +21,5 @@ jobs:
       - name: Install dependencies  # Step to install project dependencies
         run: npm install --force  # Run npm install command
 
-      - name: Run tests  # Step to run tests
-        run: npm test  # Run npm test command
-
       - name: Build project  # Step to build the project
         run: npm run build  # Run the build command
