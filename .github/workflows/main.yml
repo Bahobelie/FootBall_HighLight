@@ -1,0 +1,28 @@
+name: React CI/CD Pipeline
+
+on:  # This specifies the event that triggers the workflow
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the main branch
+
+jobs:
+  build:  # Define the job named 'build'
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:  # Define the steps to execute in this job
+      - name: Checkout code  # Step to check out the code from the repository
+        uses: actions/checkout@v2  # Use the checkout action
+
+      - name: Set up Node.js  # Step to set up the Node.js environment
+        uses: actions/setup-node@v2  # Use the setup-node action
+        with:
+          node-version: '16'  # Specify the version of Node.js
+
+      - name: Install dependencies  # Step to install project dependencies
+        run: npm install  # Run npm install command
+
+      - name: Run tests  # Step to run tests
+        run: npm test  # Run npm test command
+
+      - name: Build project  # Step to build the project
+        run: npm run build  # Run the build command
