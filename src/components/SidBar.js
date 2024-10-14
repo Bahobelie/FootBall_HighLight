@@ -45,7 +45,6 @@ const Sidebar = () => {
 
 
     // Function to display embeds for selected matches
-
     console.log(selectedMatches);
     const renderSelectedMatchEmbeds = () => {
         if (selectedMatches.length === 0) {
@@ -99,6 +98,7 @@ const Sidebar = () => {
                                 <CardContent>
                                     <Typography variant="h5">{ country }</Typography>
                                     <FormGroup>
+
                                         { Object.entries(leagues).map(([league, match]) => (
                                             <FormControlLabel
                                                 key={ league }
@@ -111,6 +111,7 @@ const Sidebar = () => {
                                                 label={ league }
                                             />
                                         )) }
+
                                     </FormGroup>
                                 </CardContent>
                             </Card>
