@@ -6,10 +6,12 @@ import Typography from "@mui/material/Typography";
 
 const App = () => {
     return (
-        <ThemeCustomization>
-            <ThemeRoutes/>
-        </ThemeCustomization>
         <Typography>Test Ci/Cd Peplines</Typography>
+
+            <ThemeCustomization>
+                    <ThemeRoutes/>
+                </ThemeCustomization>
+
     )
 };
 export default App;
