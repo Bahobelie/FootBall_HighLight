@@ -19,7 +19,7 @@ jobs:
           node-version: '16'  # Specify the version of Node.js
 
       - name: Install dependencies  # Step to install project dependencies
-        run: npm install  # Run npm install command
+        run: npm install --force  # Run npm install command
 
       - name: Run tests  # Step to run tests
         run: npm test  # Run npm test command
