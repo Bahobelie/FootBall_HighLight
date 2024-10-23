@@ -1,13 +1,11 @@
 // App.js
 import React from 'react';
-import ThemeCustomization from "./themes";
-import ThemeRoutes from "./routes";
+import PrimarySearchAppBar from "./components/AppBar";
+import './index.css';
 
 const App = () => {
     return (
-            <ThemeCustomization>
-                    <ThemeRoutes/>
-                </ThemeCustomization>
+   <PrimarySearchAppBar/>
 
     )
 };
