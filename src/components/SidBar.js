@@ -14,6 +14,7 @@ import {
     Grid,
 } from "@mui/material";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 const Sidebar = () => {
     const [matches, setMatches] = useState([]);
@@ -107,9 +108,13 @@ const Sidebar = () => {
                                         onClick={() => setExpandedCountries(prev => ({ ...prev, [country]: !prev[country] }))}
                                         size="small"
                                     >
-                                        <AddCircleOutlineIcon sx={{color:'green'}}/>
+                                        {expandedCountries[country] ? (
+                                            <RemoveCircleOutlineIcon sx={{ color: 'gray' }} />
+                                        ) : (
+                                            <AddCircleOutlineIcon sx={{ color: 'green' }} />
+                                        )}
                                     </IconButton>
-                                        {country}
+                                    {country}
                                 </div>
                                 <Collapse in={expandedCountries[country]} timeout="auto" unmountOnExit>
                                     <FormGroup>
